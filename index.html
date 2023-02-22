@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Import Normalize Page (Reset Page) -->
+  <link rel="stylesheet" href="./css/normalize.css">
+
+  <!-- Import FontAwesome Icons -->
+  <link rel="stylesheet" href="./css/all.min.css">
+
+  <!-- Link With Css Main File -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="container">
+      <div class="theme-number">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
+      <div class="title">
+        <h2>calc</h2>
+        <div class="themes">
+          <p>theme</p>
+          <div class="theme-option">
+            <span class="one"></span>
+          </div>
+        </div>
+      </div>
+      <form class="opertion-calc-form">
+        <input type="text" class="screen-input"></input>
+        <div class="numbers-operations">
+          <button class="btn number" data-calc="7">7</button>
+          <button class="btn number" data-calc="8">8</button>
+          <button class="btn number" data-calc="9">9</button>
+          <button class="btn del" data-calc="del">Del</button>
+          <button class="btn number" data-calc="4">4</button>
+          <button class="btn number" data-calc="5">5</button>
+          <button class="btn number" data-calc="6">6</button>
+          <button class="btn operation" data-calc="+">+</button>
+          <button class="btn number" data-calc="1">1</button>
+          <button class="btn number" data-calc="1">2</button>
+          <button class="btn number" data-calc="3">3</button>
+          <button class="btn operation" data-calc="-">-</button>
+          <button class="btn number" data-calc=".">.</button>
+          <button class="btn number" data-calc="0">0</button>
+          <button class="btn operation" data-calc="/">/</button>
+          <button class="btn operation" data-calc="*">x</button>
+          <button type="reset" class="btn reset" data-calc="res">Reset</button>
+          <button class="btn equal">=</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdelrahman Elkambshawi</a>.
+  </div>
+  <script src="./js/main.js" ></script>
+  <script src="./js/themeJs.js" ></script>
+</body>
+</html>

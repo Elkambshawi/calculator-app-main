@@ -1,0 +1,220 @@
+* {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background-keypad-backgroun: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    --darkblue-key-background: hsl(225, 21%, 49%);
+    --darkblue-key-shadow: hsl(224, 28%, 35%);
+    --red-key-background-toggle: hsl(6, 63%, 50%);
+    --dark-red-key-shadow: hsl(6, 70%, 34%);
+    --light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --grayish-orange-key-shadow: hsl(28, 16%, 65%);
+    --text-very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --text-white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--main-background);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+    .container {
+        width: 370px;
+    }
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 500px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 500px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 500px;
+    }
+}
+
+.calculator .container .theme-number {
+    text-align: right;
+    font-size: 12px;
+}
+
+.calculator .container .theme-number span {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 20px;
+    color: var(--text-white);
+}
+
+.calculator .container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculator .container .title h2 {
+    color: var(--text-white);
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.calculator .container .title .themes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculator .container .title .themes p {
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-right: 25px;
+}
+
+.calculator .container .title .themes .theme-option {
+    width: 80px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--text-white);
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--toggle-background-keypad-backgroun);
+}
+
+.calculator .container .title .themes .theme-option span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--red-key-background-toggle);
+    /* left: 3px; */
+    top: 3px;
+    transition: .3s;
+}
+
+.calculator .container .title .themes .theme-option span.one {
+    transform: translateX(3px);
+}
+
+.calculator .container .title .themes .theme-option span.two {
+    transform: translateX(33px);
+}
+
+.calculator .container .title .themes .theme-option span.three {
+    transform: translateX(63px);
+}
+
+.opertion-calc-form input[type='text'] {
+    width: 100%;
+    height: 100px;
+    background-color: var(--screen-background);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 60px;
+    color: var(--text-white);
+    text-align: right;
+}
+
+.opertion-calc-form .numbers-operations {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    background-color: var(--toggle-background-keypad-backgroun);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(90px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 489px) {
+    .opertion-calc-form .numbers-operations {
+        grid-template-columns: repeat(auto-fill,minmax(80px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 419px) {
+    .opertion-calc-form .numbers-operations {
+        grid-template-columns: repeat(auto-fill,minmax(65px, 1fr));
+    }
+}
+
+.opertion-calc-form .numbers-operations button {
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--light-grayish-orange-key-background);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-very-dark-grayish-blue);
+    box-shadow: 0px 3px 0px var(--grayish-orange-key-shadow);
+    outline: none;
+    border: none;
+    transition: .3s;
+}
+
+.opertion-calc-form .numbers-operations button:hover {
+    background-color: var(--text-white);
+}
+
+.opertion-calc-form .numbers-operations button.del,
+.opertion-calc-form .numbers-operations button.reset {
+    background-color: var(--main-background);
+    color: var(--text-white);
+    box-shadow: 0px 3px 0px var(--darkblue-key-shadow);
+    text-transform: uppercase;
+}
+
+.opertion-calc-form .numbers-operations button.del:hover,
+.opertion-calc-form .numbers-operations button.reset:hover {
+    background-color: var(--darkblue-key-background);
+}
+
+.opertion-calc-form .numbers-operations button.reset,
+.opertion-calc-form .numbers-operations button.equal {
+    grid-column: span 2;
+}
+
+.opertion-calc-form .numbers-operations button.equal {
+    background-color: var(--red-key-background-toggle);
+    color: var(--text-white);
+    box-shadow: 0px 3px 0px var(--dark-red-key-shadow);
+}
+
+.opertion-calc-form .numbers-operations button.equal:hover {
+    background-color: hsl(6, 63%, 60%);
+}
